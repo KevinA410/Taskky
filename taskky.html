@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-dark bg-primary">
+    <!--Brand-->
+    <a href="index.html" class="navbar-brand">
+      <img src="img/icon-white.svg" width="30px" height="30px">
+      Tassky
+    </a>
+
+    <!--User Options-->
+    <div class="btn-group dropleft">
+      <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <img src="img/user.png" width="30px" height="30px">
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">
+          <img src="img/usuario.svg" width="20px" height="20px">
+          Profile
+        </a>
+        <a class="dropdown-item" href="#">
+          <img src="img/settings.svg" width="20px" height="20px">
+          Settings
+        </a>
+        <div class="dropdown-item custom-control custom-switch ml-4">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1">
+          <label class="custom-control-label" for="customSwitch1">Dark mode</label>
+        </div>
+        <a class="dropdown-item" href="#">
+          <img src="img/exit.svg" width="20px" height="20px">
+          Sign off
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!---->
+
+  <!--Navbar tabs-->
+  <nav class="navbar navbar-light bg-light">
+    <!--Button toggle-->
+    <button class="navbar-toggler" id="menu-toggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Tabs-->
+    <ul class="h4 nav nav-tabs nav-justified mr-auto" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link" id="tabNotas" data-toggle="tab" href="#notas" role="tab" aria-controls="notas"
+          aria-selected="true">Notes
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tabTareas" data-toggle="tab" href="#tareas" role="tab" aria-controls="tareas"
+          aria-selected="false">Tasks
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!---->
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <!--My slide menu-->
+      <!--Header-->
+      <div class="row row-cols-3 m-1 mt-4">
+        <p class="col-4 mr-4 h4 text-muted">Categories</p>
+        <input type="search" class="col-5 form-control" placeholder="Search">
+        <button class="col-2 ml-1 btn btn-primary d-inline" id="add_category">
+          <img src="img/lupa_white.svg" width="15px" height="15px">
+        </button>
+      </div>
+
+      <hr class="mt-2 ml-2">
+      <!--Categories list-->
+      <div class="card ml-2">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            College&nbsp;<span class="badge badge-pill badge-primary">10</span>
+          </li>
+          <li class="list-group-item">
+            Work&nbsp;<span class="badge badge-pill badge-primary">5</span>
+          </li>
+          <li class="list-group-item">
+            Software&nbsp;<span class="badge badge-pill badge-primary">3</span>
+          </li>
+        </ul>
+      </div>
+
+      <!--Add category-->
+      <button class="btn btn-primary btn-block mt-3">Add category</button>
+      <!---->
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <!--Main content-->
+      <div class="container tab-content" id="myTabContent">
+        <!--Tab area-->
+        <div class="tab-pane fade show active" id="notas" role="tabpanel" aria-labelledby="tabNotas">
+          <!--Notes-->
+          <div class="row row-cols-1 row-cols-lg-2">
+            <!--New note (form)-->
+            <div class="col mt-2">
+              <div class="card bg-light" width="90%">
+                <div class="card-header bg-primary">
+                  <input type="text" placeholder="Title" class="form-control">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <textarea placeholder="Write here..." name="" class="form-control" id=""></textarea>
+                  </p>
+                  <div class="text-right">
+                    <button class="btn btn-secondary">
+                      <img src="img/goma-de-borrar.svg" width="20px" height="20px" alt="">
+                    </button>
+                    <button class="btn btn-primary">
+                      <img src="img/floppy-disk.svg" width="20px" width="20px" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Note 1-->
+            <div class="col mt-2">
+              <div class="card bg-light" width="90%">
+                <div class="card-header">
+                  <h5>Interfaces design</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-text text-justify">
+                    Write a UI design report with visual, graphic and communication design techniques.
+                  </p>
+                  <div class="text-right">
+                    <button class="btn btn-danger">
+                      <img src="img/delete-package.svg" width="20px" height="20px" alt="">
+                    </button>
+                    <div class="btn-group dropup">
+                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/compartir.svg" width="20px" height="20px" alt="">
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <img src="img/whatsapp.svg" width="20px" height="20px" alt="">
+                          Whatsapp</a>
+                        <a class="dropdown-item" href="#">
+                          <img src="img/facebook.svg" width="20px" height="20px" alt="">
+                          Facebook</a>
+                        <a class="dropdown-item" href="#">
+                          <img src="img/logotipo-de-instagram.svg" width="20px" height="20px" alt="">
+                          Instagram</a>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary">
+                      <img src="img/lapiz.svg" width="20px" height="20px">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Area de tareas-->
+        <div class="tab-pane fade" id="tareas" role="tabpanel" aria-labelledby="tabTareas">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <!--New list (form)-->
+            <div class="col mt-2">
+              <div class="card bg-light" width="90%">
+                <div class="card-header bg-primary">
+                  <input type="text" placeholder="List title" class="form-control">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" aria-label="Radio button for following text input">
+                        </div>
+                      </div>
+                      <input type="text" placeholder="Write a task" class="form-control"
+                        aria-label="Text input with radio button">
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" aria-label="Radio button for following text input">
+                        </div>
+                      </div>
+                      <input type="text" placeholder="Write a task" class="form-control"
+                        aria-label="Text input with radio button">
+                    </div>
+                  </p>
+                  <div class="text-right">
+                    <button class="btn btn-secondary">
+                      <img src="img/goma-de-borrar.svg" width="20px" height="20px">
+                    </button>
+                    <button class="btn btn-primary">
+                      <img src="img/floppy-disk.svg" width="20px" height="20px">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Checklist 1-->
+            <div class="col mt-2">
+              <div class="card bg-light" width="90%">
+                <div class="card-header">
+                  <h5 class="card-title">Taskky project</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" aria-label="Radio button for following text input">
+                        </div>
+                      </div>
+                      <input type="text" placeholder="Add dark mode" class="form-control"
+                        aria-label="Text input with radio button">
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" aria-label="Radio button for following text input">
+                        </div>
+                      </div>
+                      <input type="text" placeholder="Create database connection" class="form-control"
+                        aria-label="Text input with radio button">
+                    </div>
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" aria-label="Radio button for following text input">
+                        </div>
+                      </div>
+                      <input type="text" placeholder="Make responsive" class="form-control"
+                        aria-label="Text input with radio button">
+                    </div>
+                  </p>
+                  <div class="text-right">
+                    <button class="btn btn-danger">
+                      <img src="img/delete-package.svg" width="20px" height="20px">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
